@@ -1,0 +1,1 @@
+{"data":{"values":[{"a":"A","b":28},{"a":"B","b":55},{"a":"C","b":43},{"a":"D","b":91},{"a":"E","b":81}]},"description":"A simple bar chart with embedded data.","encoding":{"x":{"field":"a","type":"ordinal"},"y":{"field":"b","type":"quantitative"}},"mark":"bar"}
