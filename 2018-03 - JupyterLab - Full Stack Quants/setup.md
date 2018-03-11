@@ -20,18 +20,18 @@ They are available in a number of different configurations that form a hierarchi
 
     ```sudo service docker start```
 
-4. Add the ec2-user to the docker group so you can execute Docker commands without using sudo:
+4. Add the `ec2-user` to the docker group so you can execute Docker commands without using `sudo`:
 
     ```sudo usermod -a -G docker ec2-user```
 
 5. Log out and log back in again to pick up the new docker group permissions.
-6. Verify that the `ec2-user` can run Docker commands without sudo.
+6. Verify that the `ec2-user` can run Docker commands without `sudo`:
 
     ```docker info```
 
 7. Open Port `1234` on your EC2 instance.
 
-8. Run docker image.
+8. Run docker image:
 
     ```
     docker run -it --rm \
