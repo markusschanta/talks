@@ -32,6 +32,17 @@
       color: #F37626;
       opacity: 0.8;
     }
+    
+    .reveal .small p,
+    .reveal .small ol,
+    .reveal .small li { 
+      font-size: 21px;
+      margin: 10px 0;
+    }
+    
+    .reveal code {
+      color: #F37626;
+    }
   </style>
 </head>
 
@@ -95,26 +106,100 @@
         </textarea>
       </section>
       
-      <section data-markdown>
-        <textarea data-template>
-          # Setting up JupyterLab on AWS
-        </textarea>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            <h1 style="font-size: 1.75em;">Setting up JupyterLab on AWS</h1>
+            ## [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)
+            Hierarchical stacks of ready-to-run Jupyter applications in Docker
+          </textarea>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            <img data-src="presentation/inherit-diagram.svg" style="max-width: 70%;">
+          </textarea>
+        </section>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            <h1 style="font-size: 1.8em;">Setup (1/2)</h1>
+            <span class="small">
+              1. Update the installed packages and package cache on your instance:
+
+                  ```sudo yum update```
+
+              2. Install the most recent Docker Community Edition package:
+
+                  ```sudo yum install -y docker```
+
+              3. Start the Docker service:
+
+                  ```sudo service docker start```
+
+              4. Add the `ec2-user` to the docker group so you can execute Docker commands without <br/> using `sudo`:
+
+                  ```sudo usermod -a -G docker ec2-user```
+
+              5. Log out and log back in again to pick up the new docker group permissions.
+              6. Verify that the `ec2-user` can run Docker commands without `sudo`:
+
+                  ```docker info```
+            </span>
+          </textarea>
+        </section>
+        <section>
+          <h1 style="font-size: 1.8em;">Setup (2/2)</h1>
+          <span class="small">
+          <ol start="7">
+            <li><p>Open Port <code>1234</code> on your EC2 instance.</p></li>
+            <li>
+              <p>Run docker image:</p>
+              <code>
+                <p style="margin: 0;">docker run -it --rm \</p>
+                <p style="margin: 0 0 0 2.5em;">-v "/home/ec2-user/notebooks":"/home/jovyan" \</p>
+                <p style="margin: 0 0 0 2.5em;">-p 1234:8888 \<br/>
+                <p style="margin: 0 0 0 2.5em;">jupyter/scipy-notebook \</p>
+                <p style="margin: 0 0 0 2.5em;">start.sh jupyter lab \</p>
+                <p style="margin: 0 0 0 5em;">--NotebookApp.password='sha1:123..321'</p>
+              </code>
+            </li>
+            <li>
+              <p>Your JupyterLab should now be accessible at <br/>
+                <code>http://ec2-12-34-45-67.compute-1.amazonaws.com:1234/</code>.
+              </p>
+            </li>
+          </ol>
+          </span>
+        </section>
       </section>
       
       <section data-markdown>
         <textarea data-template>
           # Resources
             * [Presentation &amp; Examples](https://github.com/mschanta/talks/tree/2018-03-jupyterlab/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants) (git.io/vAhE9)
+            * [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)
             * [jupyter.org](http://jupyter.org/)
-            * [Awesome List](https://github.com/mschanta/awesome-jupyter)
+            * [Jupyter Awesome List](https://github.com/mschanta/awesome-jupyter)
             * [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) (Aug 21-24 2018, New York)
         </textarea>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Q & A
+          </textarea>
+        </section>
       </section>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha256-ixSKHrWAL2k0mqVSRju9+to2/uZSEK9+kJRfdNBolG8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js" integrity="sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js" integrity="sha256-k07Q1HjAu3jUhg23V+WcK14cqHXbgRpIdYHjfLOkS+c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js" integrity="sha256-Vn5yQ1qZyXA5iaNBIQOU3BCgEp1CU2CHUcPewUMn1tw=" crossorigin="anonymous"></script>
   <script>
     Reveal.initialize();
   </script>
