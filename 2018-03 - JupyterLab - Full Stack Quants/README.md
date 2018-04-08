@@ -1,7 +1,6 @@
 # JupyterLab - Your Personal Data Science Workbench
 
-
-<a href="https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench" target="_blank"><img src="banner.jpg" alt="video banner"></a>
+[![Video Banner](banner.jpg)](https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench)
 
 These are the materials for the [March 2018 presentation](https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench) at [Full Stack Quants](http://fullstackquants.org/), London:
 
