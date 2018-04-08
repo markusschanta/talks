@@ -1,6 +1,8 @@
 # JupyterLab - Your Personal Data Science Workbench
 
-These are the materials for the [March 2018 presentation](https://skillsmatter.com/meetups/10726-jupyterlab-your-personal-data-science-workbench) at [Full Stack Quants](http://fullstackquants.org/), London:
+[![Video Banner](banner.jpg)](https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench)
+
+These are the materials for the [March 2018 presentation](https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench) at [Full Stack Quants](http://fullstackquants.org/), London:
 
  * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/presentation.html)
  * [Example Notebooks](https://github.com/markusschanta/talks/tree/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/notebooks) (available as interactive notebooks via [binder](https://mybinder.org/v2/gh/markusschanta/talks/master?urlpath=lab/tree/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/notebooks))
