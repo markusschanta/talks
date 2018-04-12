@@ -7,8 +7,8 @@ This repository contains slides and accompanying materials for various talks I'v
       <th>Description</th>
     </tr>
     <tr>
-      <td><a href="2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants"><b>JupyterLab - Your Personal Data Science Workbench</b></a></td>
-      <td>This presentation introduces JupyterLab as a data science/research environment and shows off its most useful features. It also includes instructions for setting up an instance of JupyterLab either locally or in the cloud on Amazon AWS.</td>
+      <td width="30%"><a href="2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants"><b>JupyterLab - Your Personal Data Science Workbench</b></a></td>
+      <td width="70%">This presentation introduces JupyterLab as a data science/research environment and shows off its most useful features. It also includes instructions for setting up an instance of JupyterLab either locally or in the cloud on Amazon AWS.</td>
     </tr>
   </tbody>
 </table>
