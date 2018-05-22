@@ -1,0 +1,23 @@
+{
+  "data": {"url": "data/iris.csv"},
+  "layer": [
+    {
+      "mark": {"type": "point"},
+      "encoding": {
+        "x": {"field": "species", "type": "n"},
+        "y": {"field": "petalLength", "type": "q"},
+        "color": {"field": "species", "type": "n"}
+      }
+    },
+    {
+      "mark": {"type": "tick", "color": "black"},
+      "encoding": {
+        "x": {"field": "species", "type": "n"},
+        "y": {"aggregate": "mean", "field": "petalLength", "type": "q"}
+      }
+    }   
+  ],
+  "width": 200,
+  "height": 200,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
+}
