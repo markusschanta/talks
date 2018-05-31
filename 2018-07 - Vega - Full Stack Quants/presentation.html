@@ -80,6 +80,13 @@
 <body>
   <div class="reveal">
     <div class="slides">
+      <section data-markdown>
+        <textarea data-template>
+          # All Roads Lead to Vega
+          <object data="vega.svg" type="image/svg+xml">
+        </textarea>
+      </section>
+
       <script type="text/javascript">
           var spec = "iris-simple.json";
           vegaEmbed('#iris-simple', spec, {actions: false}).then(function(result) {}).catch(console.error);
