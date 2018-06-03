@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "description": "A dashboard with cross-highlighting.",
+  "data": {"url": "data/iris.csv"},
+  "vconcat": [
+    {
+      "width": 300,
+      "layer": [{
+        "mark": "point",
+        "encoding": {
+          "x": { "field": "petalLength", "type": "quantitative" },
+          "y": { "field": "petalWidth", "type": "quantitative" },
+          "color": { "value": "#CCC" }
+        }
+      }, {
+        "transform": [{
+          "filter": {"selection": "pts"}
+        }],
+        "mark": "point",
+        "encoding": {
+          "x": { "field": "petalLength", "type": "quantitative" },
+          "y": { "field": "petalWidth", "type": "quantitative" },
+          "color": { "field": "species", "type": "nominal" }
+        }
+      }]
+    }, {
+      "width": 300,
+      "height": 100,
+      "mark": "bar",
+      "selection": {
+        "pts": {"type": "single", "encodings": ["x"]}
+      },
+      "encoding": {
+        "x": {"field": "species", "type": "nominal", "axis": {"labelAngle": -40}},
+        "y": {"aggregate": "count", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "selection": "pts",
+            "value": "steelblue"
+          },
+          "value": "#CCC"
+        }
+      }
+    }
+  ]
+}

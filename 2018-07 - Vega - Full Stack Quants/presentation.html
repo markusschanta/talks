@@ -82,21 +82,61 @@
     <div class="slides">
       <section data-markdown>
         <textarea data-template>
-          # All Roads Lead to Vega
-          <object data="vega.svg" type="image/svg+xml">
+          # <span style="color: #F37626; ">Vega</span>
+          ### [Subtitle]
+
+
+          <p style="text-align: right; padding-top: 3em;">Markus Schanta</p>
+          <p style="text-align: right">
+            <img src='http://fullstackquants.org/wp-content/uploads/2016/07/fsq_logo_3.png' width="193px" height="88px" />
+          </p>
+          </textarea>
+      </section>
+      
+      <section data-markdown>
+        <textarea data-template>
+          # Overview
+            * Introduction to Vega and Vega-Lite
+            * Step-by-Step Vega-Lite Tutorial
+            * Related Tools &amp; Libraries
+            * Q &amp; A
+
+          <h2 class="fragment" style="color: #F37626; padding-top: 1em;">git.io/[github url]</h2>
         </textarea>
+      </section>
+      
+      <section>
+        <script type="text/javascript">
+          var spec = "iris-interactive.json";
+          vegaEmbed('#iris-interactive', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Vega-Lite - A Concise Grammar of Interactive Graphics
+              <div id="iris-interactive"></div>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # All Roads Lead to Vega
+            <object data="vega.svg" type="image/svg+xml" />
+          </textarea>
+        </section>
       </section>
 
       <script type="text/javascript">
           var spec = "iris-simple.json";
-          vegaEmbed('#iris-simple', spec, {actions: false}).then(function(result) {}).catch(console.error);
+          vegaEmbed('#iris-simple', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
       </script>
       
-      <section data-markdown>
-        <textarea data-template>
-          # A Simple Scatter Plot
-            <div class="left" id="iris-simple"></div>
-            <pre class="right">
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # A Simple Scatter Plot
+              <div class="left" id="iris-simple"></div>
+              <pre class="right">
 {
   <span class="fragment">"data": {"url": "data/iris.csv"},</span>
   <span class="fragment">"mark": "point",</span>
@@ -106,20 +146,20 @@
   },</span>
   <span class="fragment">"$schema": "https://vega.github.io/schema/vega-lite/v2.json"</span>
 }
-              </pre>
-        </textarea>
-      </section>
-      
-      <script type="text/javascript">
-          var spec = "iris-color.json";
-          vegaEmbed('#iris-color', spec, {actions: false}).then(function(result) {}).catch(console.error);
-      </script>
-      
-      <section data-markdown>
-        <textarea data-template>
-          # Adding <span style="color: #4C78A8; ">Color</span>
-            <div class="left fragment" id="iris-color" data-fragment-index="1"></div>
-            <pre class="right">
+                </pre>
+          </textarea>
+        </section>
+
+        <script type="text/javascript">
+            var spec = "iris-color.json";
+            vegaEmbed('#iris-color', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Adding <span style="color: #4C78A8; ">Color</span>
+              <div class="left fragment" id="iris-color" data-fragment-index="1"></div>
+              <pre class="right">
 {
   "data": {"url": "data/iris.csv"},
   "mark": "point",
@@ -130,20 +170,20 @@
   },
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
 }
-              </pre>
-        </textarea>
-      </section>
-      
-      <script type="text/javascript">
-          var spec = "iris-row.json";
-          vegaEmbed('#iris-row', spec, {actions: false}).then(function(result) {}).catch(console.error);
-      </script>
-      
-      <section data-markdown>
-        <textarea data-template>
-          # A <span style="color: #4C78A8; ">Row</span> of Charts
-            <div class="left fragment" id="iris-row" data-fragment-index="1"></div>
-            <pre class="right">
+                </pre>
+          </textarea>
+        </section>
+
+        <script type="text/javascript">
+            var spec = "iris-row.json";
+            vegaEmbed('#iris-row', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # A <span style="color: #4C78A8; ">Row</span> of Charts
+              <div class="left fragment" id="iris-row" data-fragment-index="1"></div>
+              <pre class="right">
 {
   "data": {"url": "data/iris.csv"},
   "mark": "point",
@@ -156,18 +196,18 @@
   "height": 100,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
 }
-              </pre>
-        </textarea>
-      </section>      <script type="text/javascript">
-          var spec = "iris-aggregate.json";
-          vegaEmbed('#iris-aggregate', spec, {actions: false}).then(function(result) {}).catch(console.error);
-      </script>
+                </pre>
+          </textarea>
+        </section>      <script type="text/javascript">
+            var spec = "iris-aggregate.json";
+            vegaEmbed('#iris-aggregate', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
 
-      <section data-markdown>
-        <textarea data-template>
-          # <span style="color: #4C78A8; ">Layering</span> and <span style="color: #F58518; ">Aggregation</span>
-            <div class="left" id="iris-aggregate"></div>
-            <pre class="right">
+        <section data-markdown>
+          <textarea data-template>
+            # <span style="color: #4C78A8; ">Layering</span> and <span style="color: #F58518; ">Aggregation</span>
+              <div class="left" id="iris-aggregate"></div>
+              <pre class="right">
 {
   "data": {"url": "data/iris.csv"},
   <mark>"layer": [
@@ -188,160 +228,34 @@
     <mark>}   
   ]</mark>
 }
-              </pre>
-        </textarea>
-      </section>
-
-      <section data-markdown>
-        <textarea data-template>
-          # <span style="color: #F37626; ">Vega</span>
-          ### [Subtitle]
-
-
-          <p style="text-align: right; padding-top: 3em;">Markus Schanta</p>
-          <p style="text-align: right">
-            <img src='http://fullstackquants.org/wp-content/uploads/2016/07/fsq_logo_3.png' width="193px" height="88px" />
-          </p>
-          </textarea>
-      </section>
-      
-      <section data-markdown>
-        <textarea data-template>
-          # Overview
-            * Introduction to Notebooks and Jupyter(Lab)
-            * Live Demo of JupyterLab
-            * Setting up JupyterLab (on AWS)
-
-          <h2 class="fragment" style="color: #F37626; padding-top: 1em;">git.io/vxe5q</h2>
-        </textarea>
-      </section>
-      
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            # What are Jupyter Notebooks?
-              <p class="fragment">Jupyter is an **open-source web application** that allows you to create and share **notebooks that contain live code, equations, visualizations and narrative text**.</p>
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            <img data-src="presentation/notebook.png" style="max-width: 60%;">
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            # IPython Notebook
-            # &darr;
-            # Jupyter Notebook
-            # &darr;
-            # JupyterLab
-          </textarea>
-        </section>
-      </section>
-      
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            # Why Notebooks?
-              * <p class="fragment">Code output documented in a runnable format</p>
-              * <p class="fragment">Great medium for explaining how to use a piece of code or exploring a dataset</p>
-              * <p class="fragment">Apply Agile methodology to data analysis</p>
-              * <p class="fragment">Make research more transparent and reproducible</p>
+                </pre>
           </textarea>
         </section>
       </section>
       
       <section data-markdown>
         <textarea data-template>
-          # Demo
+          # Related Tools &amp; Libraries
+            * vega-embed
+            * Online Vega/Vega-Lite Editor
+            * Voyager
+            * Altair
+            * pdvega
         </textarea>
-      </section>
-      
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            <h1 style="font-size: 1.75em;">Setting up JupyterLab on AWS</h1>
-            ## [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)
-            Hierarchical stacks of ready-to-run Jupyter applications in Docker
-          </textarea>
-        </section>
-        
-        <section data-markdown>
-          <textarea data-template>
-            <img data-src="presentation/inherit-diagram.svg" style="max-width: 70%;">
-          </textarea>
-        </section>
-      </section>
-      
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-            <h1 style="font-size: 1.8em;">Setup (1/2)</h1>
-            <span class="small">
-              1. Update the installed packages and package cache on your instance:
-
-                  ```sudo yum update```
-
-              2. Install the most recent Docker Community Edition package:
-
-                  ```sudo yum install -y docker```
-
-              3. Start the Docker service:
-
-                  ```sudo service docker start```
-
-              4. Add the `ec2-user` to the docker group so you can execute Docker commands without <br/> using `sudo`:
-
-                  ```sudo usermod -a -G docker ec2-user```
-
-              5. Log out and log back in again to pick up the new docker group permissions.
-              6. Verify that the `ec2-user` can run Docker commands without `sudo`:
-
-                  ```docker info```
-            </span>
-          </textarea>
-        </section>
-        <section>
-          <h1 style="font-size: 1.8em;">Setup (2/2)</h1>
-          <span class="small">
-          <ol start="7">
-            <li><p>Open Port <code>1234</code> on your EC2 instance.</p></li>
-            <li>
-              <p>Run docker image:</p>
-              <code>
-                <p style="margin: 0;">docker run -it --rm \</p>
-                <p style="margin: 0 0 0 2.5em;">-v "/home/ec2-user/notebooks":"/home/jovyan" \</p>
-                <p style="margin: 0 0 0 2.5em;">-p 1234:8888 \<br/>
-                <p style="margin: 0 0 0 2.5em;">jupyter/scipy-notebook \</p>
-                <p style="margin: 0 0 0 2.5em;">start.sh jupyter lab \</p>
-                <p style="margin: 0 0 0 5em;">--NotebookApp.password='sha1:123..321'</p>
-              </code>
-            </li>
-            <li>
-              <p>Your JupyterLab should now be accessible at <br/>
-                <code>http://ec2-12-34-45-67.compute-1.amazonaws.com:1234/</code>.
-              </p>
-            </li>
-          </ol>
-          </span>
-        </section>
       </section>
       
       <section data-markdown>
         <textarea data-template>
           # Resources
-            * [Presentation &amp; Examples](https://github.com/markusschanta/talks/tree/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants) (git.io/vxe5q)
-            * [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)
-            * [jupyter.org](http://jupyter.org/)
-            * [Jupyter Awesome List](https://github.com/markusschanta/awesome-jupyter)
-            * [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) (Aug 21-24 2018, New York)
+            * Presentation &amp; Examples (git.io/[github-url])
+            * Twitter / GitHub Link
         </textarea>
       </section>
       
       <section>
         <section data-markdown>
           <textarea data-template>
-            # Q & A
+            # Q &amp; A
           </textarea>
         </section>
       </section>
