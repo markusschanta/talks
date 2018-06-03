@@ -1,0 +1,9 @@
+{
+  "data": {"url": "data/iris.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "sepalLength", "type": "q"},
+    "y": {"field": "petalLength", "type": "q"}
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
+}
