@@ -28,12 +28,12 @@
     .reveal h4 { font-size: 1.2em; }
     
     .reveal a { 
-      color: #F37626;
+      color: #4C78A8;
       text-decoration: underline;
     }
     
     .reveal a:hover { 
-      color: #F37626;
+      color: #4C78A8;
       opacity: 0.8;
     }
     
@@ -63,12 +63,14 @@
       color: #4D4D4D;
     }
     
+    .reveal mark,
     .reveal pre mark {
       background-color: white;
       color: #4C78A8;
       font-weight: bold;
     }
     
+    .reveal mark.orange,
     .reveal pre mark.orange {
       background-color: white;
       color: #F58518;
@@ -82,9 +84,8 @@
     <div class="slides">
       <section data-markdown>
         <textarea data-template>
-          # <span style="color: #F37626; ">Vega</span>
-          ### [Subtitle]
-
+          # <span style="color: #4C78A8; ">Vega</span>
+          ### A Grammar of Interactive Graphics
 
           <p style="text-align: right; padding-top: 3em;">Markus Schanta</p>
           <p style="text-align: right">
@@ -96,12 +97,12 @@
       <section data-markdown>
         <textarea data-template>
           # Overview
-            * Introduction to Vega and Vega-Lite
-            * Step-by-Step Vega-Lite Tutorial
+            * Introduction to Vega
+            * Step-by-Step Vega Tutorial
             * Related Tools &amp; Libraries
             * Q &amp; A
 
-          <h2 class="fragment" style="color: #F37626; padding-top: 1em;">git.io/[github url]</h2>
+          <h2 class="fragment" style="color: #4C78A8; padding-top: 1em;">git.io/vhaTA</h2>
         </textarea>
       </section>
       
@@ -113,8 +114,15 @@
 
         <section data-markdown>
           <textarea data-template>
-            # Vega-Lite - A Concise Grammar of Interactive Graphics
+            # <span style="color: #4C78A8; ">Vega</span>
+              ### A Grammar of Interactive Graphics
               <div id="iris-interactive"></div>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # <mark>Vega</mark> is to <mark>Data Visualization</mark><br/>what <mark>SQL</mark> is to <mark>Data Querying</mark>.
           </textarea>
         </section>
 
@@ -122,6 +130,18 @@
           <textarea data-template>
             # All Roads Lead to Vega
             <object data="vega.svg" type="image/svg+xml" />
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Vega/Vega-Lite
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Authors
           </textarea>
         </section>
       </section>
@@ -233,23 +253,100 @@
         </section>
       </section>
       
-      <section data-markdown>
-        <textarea data-template>
-          # Related Tools &amp; Libraries
-            * vega-embed
-            * Online Vega/Vega-Lite Editor
-            * Voyager
-            * Altair
-            * pdvega
-        </textarea>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Related Tools &amp; Libraries
+          </textarea>
+        </section>
+        
+        <section>
+          <h1>vega-embed</h1>
+          <pre>
+            <code>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega@3&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega-lite@2&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega-embed@3&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;iris-simple-div&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var spec = &quot;iris-simple.json&quot;;
+  vegaEmbed('#iris-simple-div', spec).then(function(result) {
+    // access view as result.view
+  }).catch(console.error);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # [Online Vega/Vega-Lite Editor](https://vega.github.io/editor/#/examples/vega-lite/point_2d)
+          </textarea>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # [Voyager](http://vega.github.io/voyager/)
+          </textarea>
+        </section>
+        
+        <script type="text/javascript">
+            var spec = "iris-color.json";
+            vegaEmbed('#iris-color-2', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # Altair / pdvega
+              <div class="left" id="iris-color-2" data-fragment-index="1"></div>
+              <pre class="right">
+{
+  "data": {"url": "data/iris.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "sepalLength", "type": "q"},
+    "y": {"field": "petalLength", "type": "q"},
+    "color": {"field": "species", "type": "n"}
+  },
+}
+              </pre>
+              <pre class="right" style="margin-top: 0px;">
+import altair as alt
+from vega_datasets import data<br/>
+iris = data.iris()<br/>
+alt.Chart(iris).mark_point().encode(
+    x='petalWidth',
+    y='petalLength',
+    color='species'
+)
+              </pre>
+              <pre class="right" style="margin-top: 0px;">
+iris.vgplot.scatter(x='sepalLength',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y='petalLength',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c='species')
+              </pre>
+          </textarea>
+        </section>
       </section>
       
-      <section data-markdown>
-        <textarea data-template>
-          # Resources
-            * Presentation &amp; Examples (git.io/[github-url])
-            * Twitter / GitHub Link
-        </textarea>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Resources
+              * [Presentation &amp; Examples](http://git.io/vhaTA)
+              * [Official Example Gallery](https://vega.github.io/vega-lite/examples/)
+              * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
+              * Twitter / GitHub Link
+          </textarea>
+        </section>
       </section>
       
       <section>
