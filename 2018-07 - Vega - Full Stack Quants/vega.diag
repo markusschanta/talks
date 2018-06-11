@@ -5,7 +5,7 @@ blockdiag {
     gui [label = "GUI"];
 
     html [label = "HTML"];
-    vega [label = "vega spec (JSON)"];
+    vega [label = "Vega spec (JSON)"];
 
     chart [label = "rendered chart"];
 
