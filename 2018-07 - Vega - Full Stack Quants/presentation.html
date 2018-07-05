@@ -306,7 +306,7 @@
           <textarea data-template>
             # Altair / pdvega
               <div class="left" id="iris-color-2" data-fragment-index="1"></div>
-              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #EEE;">
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #EEE;">
 {
   "data": {"url": "data/iris.csv"},
   "mark": "point",
@@ -316,14 +316,14 @@
     "color": {"field": "species", "type": "n"}
   },
 }</pre>
-              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #D1DDEA;">
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #D1DDEA;">
 import altair as alt<br/>
 alt.Chart(iris).mark_point().encode(
     x='petalWidth',
     y='petalLength',
     color='species'
 )</pre>
-              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #D1DDEA;">
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #D1DDEA;">
 import pdvega<br/>
 iris.vgplot.scatter(x='sepalLength',
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y='petalLength',
@@ -336,7 +336,7 @@ iris.vgplot.scatter(x='sepalLength',
         <section data-markdown>
           <textarea data-template>
             # Resources
-              * [Presentation &amp; Examples](http://git.io/vhaTA)
+              * [Presentation &amp; Examples](http://git.io/vhaTA) (git.io/vhaTA)
               * [Official Example Gallery](https://vega.github.io/vega-lite/examples/)
               * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
             
