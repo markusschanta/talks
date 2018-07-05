@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha256-ol2N5Xr80jdDqxK0lte3orKGb9Ja3sOnpAUV7TTADmg=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css" integrity="sha256-7dwMOkQRlAVq/G79bV034hezbpLtwWpwTS3g4lp47yo=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
   <style>
     .reveal {
       color: #4D4D4D;
@@ -87,10 +88,8 @@
           # <span style="color: #4C78A8; ">Vega</span>
           ### A Grammar of Interactive Graphics
 
-          <p style="text-align: right; padding-top: 3em;">Markus Schanta</p>
-          <p style="text-align: right">
-            <img src='http://fullstackquants.org/wp-content/uploads/2016/07/fsq_logo_3.png' width="193px" height="88px" />
-          </p>
+          <p style="padding-top: 3em;"><i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta</p>
+          <p><img src='http://fullstackquants.org/wp-content/uploads/2016/07/fsq_logo_3.png' width="193px" height="88px" /></p>
           </textarea>
       </section>
       
@@ -307,7 +306,7 @@
           <textarea data-template>
             # Altair / pdvega
               <div class="left" id="iris-color-2" data-fragment-index="1"></div>
-              <pre class="right">
+              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #EEE;">
 {
   "data": {"url": "data/iris.csv"},
   "mark": "point",
@@ -316,23 +315,19 @@
     "y": {"field": "petalLength", "type": "q"},
     "color": {"field": "species", "type": "n"}
   },
-}
-              </pre>
-              <pre class="right" style="margin-top: 0px;">
-import altair as alt
-from vega_datasets import data<br/>
-iris = data.iris()<br/>
+}</pre>
+              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #D1DDEA;">
+import altair as alt<br/>
 alt.Chart(iris).mark_point().encode(
     x='petalWidth',
     y='petalLength',
     color='species'
-)
-              </pre>
-              <pre class="right" style="margin-top: 0px;">
+)</pre>
+              <pre class="right" style="width: 55%; padding: 1em; margin-top: 0px; background-color: #D1DDEA;">
+import pdvega<br/>
 iris.vgplot.scatter(x='sepalLength',
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y='petalLength',
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c='species')
-              </pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c='species')</pre>
           </textarea>
         </section>
       </section>
@@ -344,7 +339,8 @@ iris.vgplot.scatter(x='sepalLength',
               * [Presentation &amp; Examples](http://git.io/vhaTA)
               * [Official Example Gallery](https://vega.github.io/vega-lite/examples/)
               * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
-              * Twitter / GitHub Link
+            
+            <i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta
           </textarea>
         </section>
       </section>
@@ -353,6 +349,7 @@ iris.vgplot.scatter(x='sepalLength',
         <section data-markdown>
           <textarea data-template>
             # Q &amp; A
+            <i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta
           </textarea>
         </section>
       </section>
