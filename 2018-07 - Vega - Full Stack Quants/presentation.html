@@ -1,0 +1,368 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha256-ol2N5Xr80jdDqxK0lte3orKGb9Ja3sOnpAUV7TTADmg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css" integrity="sha256-7dwMOkQRlAVq/G79bV034hezbpLtwWpwTS3g4lp47yo=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+  <style>
+    .reveal {
+      color: #4D4D4D;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal h5,
+    .reveal h6 {
+      text-transform: none;
+      color: #4D4D4D;
+    }
+    
+    .reveal h1 { font-size: 1.5em; }
+    .reveal h2 { font-size: 1.3em; }
+    .reveal h3 { font-size: 1.2em; }
+    .reveal h4 { font-size: 1.2em; }
+    
+    .reveal a { 
+      color: #4C78A8;
+      text-decoration: underline;
+    }
+    
+    .reveal a:hover { 
+      color: #4C78A8;
+      opacity: 0.8;
+    }
+    
+    .reveal .small,
+    .reveal .small ol,
+    .reveal .small li { 
+      font-size: 21px;
+    }
+    
+    .reveal .left {
+      float: left;
+      width: 40%;
+    }
+    
+    .reveal .right {
+      float: right;
+      width: 60%;
+    }
+    
+    .reveal pre {
+      font-size: 18px;
+      box-shadow: none;
+    }
+    
+    .reveal pre a {
+      text-decoration: none;
+      color: #4D4D4D;
+    }
+    
+    .reveal mark,
+    .reveal pre mark {
+      background-color: white;
+      color: #4C78A8;
+      font-weight: bold;
+    }
+    
+    .reveal mark.orange,
+    .reveal pre mark.orange {
+      background-color: white;
+      color: #F58518;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <textarea data-template>
+          # <span style="color: #4C78A8; ">Vega</span>
+          ### A Grammar of Interactive Graphics
+
+          <p style="padding-top: 3em;"><i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta</p>
+          <p><img src='http://fullstackquants.org/wp-content/uploads/2016/07/fsq_logo_3.png' width="193px" height="88px" /></p>
+          </textarea>
+      </section>
+      
+      <section data-markdown>
+        <textarea data-template>
+          # Overview
+            * Introduction to Vega
+            * Step-by-Step Vega Tutorial
+            * Related Tools &amp; Libraries
+            * Q &amp; A
+
+          <h2 class="fragment" style="color: #4C78A8; padding-top: 1em;">git.io/vhaTA</h2>
+        </textarea>
+      </section>
+      
+      <section>
+        <script type="text/javascript">
+          var spec = "cars.json";
+          vegaEmbed('#iris-interactive', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            <div id="iris-interactive"></div>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # <mark>Vega</mark> is to <mark>Data Visualization</mark><br/>what <mark>SQL</mark> is to <mark>Data Querying</mark>.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # All Roads Lead to <mark>Vega</mark>
+            <object data="vega.svg" type="image/svg+xml" />
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Vega/Vega-Lite
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Authors
+              * [Kanit "Ham" Wongsuphasawat](https://twitter.com/kanitw)
+              * [Dominik Moritz](https://twitter.com/domoritz)
+              * [Arvind Satyanarayan](https://twitter.com/arvindsatya1)
+              * [Jeffrey Heer](https://twitter.com/jeffrey_heer)
+          </textarea>
+        </section>
+      </section>
+
+      <script type="text/javascript">
+          var spec = "iris-simple.json";
+          vegaEmbed('#iris-simple', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+      </script>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # A Simple Scatter Plot
+              <div class="left" id="iris-simple"></div>
+              <pre class="right">
+{
+  <span class="fragment">"data": {"url": "data/iris.csv"},</span>
+  <span class="fragment">"mark": "point",</span>
+  <span class="fragment">"encoding": {
+    <span class="fragment">"x": {"field": "sepalLength", "type": "q"},</span>
+    <span class="fragment">"y": {"field": "petalLength", "type": "q"}</span>
+  },</span>
+  <span class="fragment">"$schema": "https://vega.github.io/schema/vega-lite/v2.json"</span>
+}
+                </pre>
+          </textarea>
+        </section>
+
+        <script type="text/javascript">
+            var spec = "iris-color.json";
+            vegaEmbed('#iris-color', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Adding <span style="color: #4C78A8; ">Color</span>
+              <div class="left fragment" id="iris-color" data-fragment-index="1"></div>
+              <pre class="right">
+{
+  "data": {"url": "data/iris.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "sepalLength", "type": "q"},
+    "y": {"field": "petalLength", "type": "q"},
+    <mark class="fragment" data-fragment-index="1">"color": {"field": "species", "type": "n"}</mark>
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
+}
+                </pre>
+          </textarea>
+        </section>
+
+        <script type="text/javascript">
+            var spec = "iris-row.json";
+            vegaEmbed('#iris-row', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # A <span style="color: #4C78A8; ">Row</span> of Charts
+              <div class="left fragment" id="iris-row" data-fragment-index="1"></div>
+              <pre class="right">
+{
+  "data": {"url": "data/iris.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "sepalLength", "type": "q"},
+    "y": {"field": "petalLength", "type": "q"},
+    <mark class="fragment" data-fragment-index="1"#4c78a8>"row": {"field": "species", "type": "n"}</mark>
+  },
+  "width": 100,
+  "height": 100,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
+}
+                </pre>
+          </textarea>
+        </section>      <script type="text/javascript">
+            var spec = "iris-aggregate.json";
+            vegaEmbed('#iris-aggregate', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+
+        <section data-markdown>
+          <textarea data-template>
+            # <span style="color: #4C78A8; ">Layering</span> and <span style="color: #F58518; ">Aggregation</span>
+              <div class="left" id="iris-aggregate"></div>
+              <pre class="right">
+{
+  "data": {"url": "data/iris.csv"},
+  <mark>"layer": [
+    {</mark>
+      "mark": {"type": "point", "opacity": "0.2"},
+      "encoding": {
+        "x": {"field": "species", "type": "n"},
+        "y": {"field": "petalLength", "type": "q"},
+        "color": {"field": "species", "type": "n"}
+      }
+    <mark>},
+    {</mark>
+      "mark": {"type": "tick", "color": "black"},
+      "encoding": {
+        "x": {"field": "species", "type": "n"},
+        "y": {<mark class='orange'>"aggregate": "mean"</mark>, "field": "petalLength", "type": "q"}
+      }
+    <mark>}   
+  ]</mark>
+}
+                </pre>
+          </textarea>
+        </section>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Related Tools &amp; Libraries
+          </textarea>
+        </section>
+        
+        <section>
+          <h1>vega-embed</h1>
+          <pre>
+            <code>&lt;html&gt;
+&lt;head&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega@3&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega-lite@2&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vega-embed@3&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;iris-simple-div&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var spec = &quot;iris-simple.json&quot;;
+  vegaEmbed('#iris-simple-div', spec).then(function(result) {
+    // access view as result.view
+  }).catch(console.error);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+          </pre>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # [Online Vega/Vega-Lite Editor](https://vega.github.io/editor/#/examples/vega-lite/point_2d)
+          </textarea>
+        </section>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # [Voyager](http://vega.github.io/voyager/)
+          </textarea>
+        </section>
+        
+        <script type="text/javascript">
+            var spec = "iris-color.json";
+            vegaEmbed('#iris-color-2', spec, {actions: false, renderer: "svg"}).then(function(result) {}).catch(console.error);
+        </script>
+        
+        <section data-markdown>
+          <textarea data-template>
+            # Altair / pdvega
+              <div class="left" id="iris-color-2" data-fragment-index="1"></div>
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #EEE;">
+{
+  "data": {"url": "data/iris.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "sepalLength", "type": "q"},
+    "y": {"field": "petalLength", "type": "q"},
+    "color": {"field": "species", "type": "n"}
+  },
+}</pre>
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #D1DDEA;">
+import altair as alt<br/>
+alt.Chart(iris).mark_point().encode(
+    x='petalWidth',
+    y='petalLength',
+    color='species'
+)</pre>
+              <pre class="right" style="width: 55%; padding: 0.5em; margin-top: 0px; background-color: #D1DDEA;">
+import pdvega<br/>
+iris.vgplot.scatter(x='sepalLength',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y='petalLength',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c='species')</pre>
+          </textarea>
+        </section>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Resources
+              * [Presentation &amp; Examples](http://git.io/vhaTA) (git.io/vhaTA)
+              * [Official Example Gallery](https://vega.github.io/vega-lite/examples/)
+              * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
+            
+            <i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta
+          </textarea>
+        </section>
+      </section>
+      
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # Q &amp; A
+            <i class="fa">&#xf081;</i> <i class="fa">&#xf09b;</i> MarkusSchanta
+          </textarea>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha256-ixSKHrWAL2k0mqVSRju9+to2/uZSEK9+kJRfdNBolG8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js" integrity="sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js" integrity="sha256-k07Q1HjAu3jUhg23V+WcK14cqHXbgRpIdYHjfLOkS+c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js" integrity="sha256-Vn5yQ1qZyXA5iaNBIQOU3BCgEp1CU2CHUcPewUMn1tw=" crossorigin="anonymous"></script>
+    
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+
+</html>
