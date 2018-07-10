@@ -10,3 +10,10 @@ Below are links to the accompanying materials:
 
  * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation/presentation.html)
  * [Example Visualisations](https://github.com/markusschanta/talks/tree/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation)
+ 
+## Further Resources
+
+ * [Vega-Lite Example Gallery](https://vega.github.io/vega-lite/examples/)
+ * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
+ * [Vega/Vega-Lite Editor](https://vega.github.io/editor/)
+ * [Voyager](http://vega.github.io/voyager/)
