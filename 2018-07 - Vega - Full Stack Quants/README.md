@@ -8,8 +8,8 @@ The talk does not require extensive knowledge of Javascript or Python. It aims t
 
 Below are links to the accompanying materials:
 
- * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation/presentation.html)
- * [Example Visualisations](https://github.com/markusschanta/talks/tree/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation)
+ * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/master/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation/presentation.html)
+ * [Example Visualisations](https://github.com/markusschanta/talks/tree/master/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation)
  
 ## Further Resources
 
