@@ -2,12 +2,18 @@
 
 [![Video Banner](banner.jpg)](https://www.meetup.com/Full-Stack-Quants/events/248899125/)
 
-On Monday July 9th, 2018 I will give a presentation about Vega at at [Full Stack Quants](http://fullstackquants.org/) London. Vega is a framework for interactive visualisation. The talk will include a step-by-step tutorial for creating production-quality visualisations. Finally, I will give an overview of related libraries and tools that you can use to create plots more easily.
+This presentation, given in July 2018 at  [Full Stack Quants](http://fullstackquants.org/) London, gives an overview of Vega, a framework for interactive visualisation. The talk includes a step-by-step tutorial for creating production-quality visualisations as well as an overview of related libraries and tools that you can use to create plots more easily.
 
 The talk does not require extensive knowledge of Javascript or Python. It aims to provide useful information for beginners as well as people who are already  familiar with these visualisation frameworks.
 
-**If you want to attend the talk, please sign up on [meetup.com](https://www.meetup.com/Full-Stack-Quants/events/248899125/). After the presentation on July 9th, I will post the on slides and further resources on this page. [Star this repo](https://github.com/markusschanta/talks) and [follow me on Twitter](https://twitter.com/intent/follow?&screen_name=MarkusSchanta) to receive an update when they become available.**
-
 Below are links to the accompanying materials:
 
- * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation.html)
+ * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation/presentation.html)
+ * [Example Visualisations](https://github.com/markusschanta/talks/tree/vega-work/2018-07%20-%20Vega%20-%20Full%20Stack%20Quants/presentation)
+ 
+## Further Resources
+
+ * [Vega-Lite Example Gallery](https://vega.github.io/vega-lite/examples/)
+ * [Vega](https://vega.github.io/vega/docs/) / [Vega-Lite](https://vega.github.io/vega-lite/docs/) Documentation
+ * [Vega/Vega-Lite Editor](https://vega.github.io/editor/)
+ * [Voyager](http://vega.github.io/voyager/)
