@@ -12,7 +12,7 @@ This repository contains slides and accompanying materials for various talks I'v
     </tr>
     <tr>
       <td width="30%"><a href="2018-07%20-%20Vega%20-%20Full%20Stack%20Quants"><b>Vega – A Grammar of Interactive Graphics</b></a></td>
-      <td width="70%">This talk will give an overview of Vega, a framework for interactive visualisation. It will also include a step-by-step tutorial for creating production-quality visualisations. Finally, I will give an overview of related libraries and tools that you can use to create plots more easily.</td>
+      <td width="70%">This talk gives an overview of Vega, a framework for interactive visualisation. It also includes a step-by-step tutorial for creating production-quality visualisations. Finally, I give an overview of related libraries and tools that you can use to create plots more easily.</td>
     </tr>
   </tbody>
 </table>
