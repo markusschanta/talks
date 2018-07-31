@@ -11,6 +11,7 @@ The talk does not require extensive knowledge of Python, Jupyter or AWS. It aims
 Below are links to the accompanying materials:
 
  * [**Presentation Slides**](https://rawgit.com/markusschanta/talks/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/presentation.html)
+ * [**Presentation Recording**](https://skillsmatter.com/skillscasts/11613-jupyterlab-your-personal-data-science-workbench)
  * [Example Notebooks](https://github.com/markusschanta/talks/tree/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/notebooks) (available as interactive notebooks via [binder](https://mybinder.org/v2/gh/markusschanta/talks/master?urlpath=lab/tree/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/notebooks))
  * [Setup Instructions](https://github.com/markusschanta/talks/blob/master/2018-03%20-%20JupyterLab%20-%20Full%20Stack%20Quants/setup.md)
 
