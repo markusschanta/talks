@@ -2,7 +2,7 @@
 
 [![Video Banner](banner.png)](https://www.youtube.com/watch?v=gRthGTQs4jc)
 
-This podcast episode of the [Talk Python Podcast](https://talkpython.fm/) hosted by Michael Kennedy gives an overview of [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter), a curated list of awesome Jupyter projects, libraries and resources. Jupyter is an amazing environment for exploring data and generating executable reports with Python. But there are many external tools, extensions, and libraries to make it so much better and make you more productive. On this episode, we are going to cover a ton of them.
+This podcast episode of the [Talk Python Podcast](https://talkpython.fm/) hosted by Michael Kennedy gives an overview of [Awesome Jupyter](https://github.com/markusschanta/awesome-jupyter), a curated list of awesome Jupyter projects, libraries and resources. Jupyter is an amazing environment for exploring data and generating executable reports with Python. But there are many external tools, extensions, and libraries to make it so much better and make you more productive. On this episode, we are going to cover a ton of them.
 
 Below are links to the accompanying materials:
 
